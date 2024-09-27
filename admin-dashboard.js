@@ -17,5 +17,14 @@ function setupDropdown(itemClass) {
   });
 }
 
-setupDropdown(".manufactures-item");
 setupDropdown(".products-item");
+function closePage() {
+  var confirmation = confirm("Are you sure you want to exit this page? ");
+
+  if (confirmation) {
+    window.location.href = "admin-products.php";
+  }
+}
+
+var alertBox = document.getElementById("alertBox");
+console.log(alertBox);

@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(to right, #d5e5f3, #483f41);
+
+  background-image: url("../admin-images/bg1.jpg");
 }
 
 .admin-dashboard-container {
@@ -33,11 +34,12 @@ body {
 .content-dashboard {
   margin-left: 250px;
   width: calc(100% - 250px);
-  background: radial-gradient(
+
+  /* background: radial-gradient(
     759px at 14% 22.3%,
     rgb(10, 64, 88) 0%,
     rgb(15, 164, 102) 90%
-  );
+  ); */
   height: 100%;
 }
 
@@ -117,15 +119,20 @@ p {
 
 .side-nav-ul li:hover {
   cursor: pointer;
-  text-decoration: underline;
-  background-color: #7d7779;
+  background-color: #c1759bbc;
   border-radius: 10px;
+  color: aliceblue;
 }
-.side-nav-ul li span {
-  margin-left: 5px;
+.side-nav-ul li a {
   margin-top: 5px;
   font-size: 19px;
+  color: black;
+  text-decoration: none;
 }
+.side-nav-ul li a:hover {
+  color: aliceblue;
+}
+
 .admin-icons {
   font-size: 30px;
 }
@@ -153,8 +160,16 @@ p {
 }
 
 .dropdown-ul li:hover {
-  text-decoration: underline;
-  background-color: #433538;
+  background-color: #ac255ba5;
+  color: white;
+  border-radius: 5px;
+}
+
+.dropdown-ul li a {
+  text-decoration: none;
+  color: black;
+}
+.dropdown-ul li a:hover {
   color: white;
   border-radius: 5px;
 }
