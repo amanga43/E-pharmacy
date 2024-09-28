@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Profile Page</title>
+  <link rel="stylesheet" href="driver-Account.css">
+</head>
+<body>
+  <div class="profile-container">
+    <h2>Driver Profile</h2>
+    <form id="driverForm" method="POST" action="driver-profile.php">
+      <div class="profile-info">
+        <label>Name:</label>
+        <input type="text" id="name" name="name" value="John Doe" disabled>
+      </div>
+      <div class="profile-info">
+        <label>Age:</label>
+        <input type="text" id="age" name="age" value="35" disabled>
+      </div>
+      <div class="profile-info">
+        <label>Email:</label>
+        <input type="email" id="email" name="email" value="johndoe@example.com" disabled>
+      </div>
+      <div class="profile-info">
+        <label>Contact Number:</label>
+        <input type="text" id="contact" name="contact" value="+1234567890" disabled>
+      </div>
+      <div class="buttons">
+        <button type="button" id="edit-btn" onclick="enableEdit()">Edit</button>
+        <button type="submit" id="save-btn" disabled>Save</button>
+      </div>
+    </form>
+    <form id="deleteForm" method="POST" action="driver-profile.php">
+      <input type="hidden" name="delete_account" value="1">
+      <button type="submit" id="delete-btn" onclick="return confirmDelete()">Delete Account</button>
+    </form>
+  </div>
+  <script src="driver-Account.js"></script>
+</body>
+</html>

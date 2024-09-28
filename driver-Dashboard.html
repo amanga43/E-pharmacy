@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Page</title>
+    <link rel="stylesheet" href="driver-Dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Driver's Orders</h1>
+        <!-- Profile button to redirect to driver's profile page -->
+        <button id="profileBtn" onclick="goToProfile()">Profile</button>
+    </div>
+
+    <table id="ordersTable">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Status</th>
+                <th>Update Status</th>
+            </tr>
+        </thead>
+        <tbody id="deliveries-body">
+            <tr id="order-001">
+                <td>001</td>
+                <td>
+                    <select class="status-select" id="status-001">
+                        <option>Pending</option>
+                        <option>Delivered</option>
+                    </select>
+                </td>
+                <td><button class="btn update-btn" onclick="updateStatus('001', this)">Update</button></td>
+            </tr>
+            <tr id="order-002">
+                <td>002</td>
+                <td>
+                    <select class="status-select" id="status-002">
+                        <option>Pending</option>
+                        <option>Delivered</option>
+                    </select>
+                </td>
+                <td><button class="btn update-btn" onclick="updateStatus('002', this)">Update</button></td>
+            </tr>
+            <tr id="order-003">
+                <td>003</td>
+                <td>
+                    <select class="status-select" id="status-003">
+                        <option>Pending</option>
+                        <option>Delivered</option>
+                    </select>
+                </td>
+                <td><button class="btn update-btn" onclick="updateStatus('003', this)">Update</button></td>
+            </tr>
+        </tbody>
+        <tbody>
+            <!-- Orders will be dynamically injected here from PHP -->
+            <?php
+                // Include the PHP code that displays the orders
+                include 'fetch-orders.php';
+            ?>
+        </tbody>
+    </table>
+
+    <script src="driver-Dashboard.js"></script>
+</body>
+</html>

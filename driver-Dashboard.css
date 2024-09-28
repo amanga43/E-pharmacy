@@ -1,0 +1,55 @@
+body {
+    font-size: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profileBtn {
+    padding: 20px 15px;
+    width: 20%;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#profileBtn:hover {
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merges borders */
+    background-color: #fff;
+    margin: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black; /* Add full border around each cell */
+    height:80px;
+}
+
+th {
+    background-color: purple;
+    color: white;
+}
+
+td form {
+    display: block;
+}
+
+select {
+    padding: 5px;
+}
+
+

@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    background-image: url(images/background3.jpg);
+  }
+  
+  .profile-container {
+    background-color: #ccdbfd;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    min-height: 500px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .profile-info {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduced space between label and input */
+  }
+  
+  input {
+    width: calc(100% - 130px);
+    padding: 8px; /* Increased padding for better usability */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 0; /* Ensure no margin above input */
+  }
+  
+  input:disabled {
+    background-color: #e9ecef;
+  }
+  
+  .buttons {
+    text-align: center;
+  }
+  
+  button {
+    margin: 50px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  #delete-btn {
+    background-color: #dc3545;
+  }
+  

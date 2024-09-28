@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+
+  <div class="background"></div>
+  
+    <div class="profile-container">
+        <div class="profile-details">
+            <h2>User Profile</h2>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="" checked disabled> Male
+                <input type="radio" id="female" name="gender" value="" disabled> Female
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="" disabled>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" disabled></textarea>
+            </div>
+
+            <!-- Buttons below the profile details -->
+            <div class="buttons">
+                <button id="updateBtn">Update Account</button>
+                <button id="saveBtn" disabled>Save</button>
+                <button id="deleteBtn">Delete Account</button>
+            </div>
+        </div>
+
+        <!-- Images at the top-right and bottom-right -->
+        <div class="images">
+            <img src="images/mission.jpg" alt="Profile Picture" class="profile-img-top">
+            <img src="images/vision.jpg" alt="Banner" class="profile-img-bottom">
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
