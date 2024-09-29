@@ -11,13 +11,13 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prescription</title>
-  <link rel="stylesheet" href="home-page.css" />
+  <link rel="stylesheet" href="../css/home-page.css" />
 </head>
 <body>
 
       <div class="container">
         <div class="logo">
-          <img src="./assets/logo.png" alt="logo image" />
+          <img src="../../assets/logo.png" alt="logo image" />
         </div>
         <nav>
           <ul>

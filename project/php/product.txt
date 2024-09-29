@@ -68,7 +68,21 @@ if(isset($_POST['addtocart']))
   <input type="submit" value="Search" name="search_data">
 </div>
 </form>
+<?php/*
+$user_search= $_GET['TERM'];
+$sql = mysqli_query($conn,"SELECT productNmae FROM products WHERE productNmae LIKE '%".$user_search."%'");
 
+$suggestions= [];
+if(mysqli_num_rows($sql)> 0){
+  while($term =mysqli_fetch_assoc($sql)){
+    $suggestions [] =$term["productNmae"];
+  }
+;}
+
+$js= "window.suggestions=" . json_encode( $suggestions).";";
+header('Content-Type:text/javascript');
+echo $js;*/
+?>
 
 <section class="header">
 
@@ -98,7 +112,7 @@ if(isset($_POST['addtocart']))
   <div class="column">
     <div class="cat">
         <img src="../images/syrup.png" >
-            <div class="container-1">
+            <div class="container">
               <h4><b>SYRUPS</b></h4>
              
               
@@ -108,7 +122,7 @@ if(isset($_POST['addtocart']))
   <div class="column">
     <div class="cat">
         <img src="../images/eyecare.png" >
-            <div class="container-1">
+            <div class="container">
               <h4><b>EYECARE</b></h4>
  
             </div>
@@ -119,7 +133,7 @@ if(isset($_POST['addtocart']))
   <div class="column">
     <div class="cat">
         <img src="../images/shampoo.png" >
-            <div class="container-1r">
+            <div class="container">
               <h4><b>HAIRCARE</b></h4>
  
             </div></div>
@@ -129,7 +143,7 @@ if(isset($_POST['addtocart']))
 <div class="column">
     <div class="cat">
         <img src="../images/supplement.png" >
-            <div class="container-1">
+            <div class="container">
               <h4><b>VITAMINS</b></h4>
             
               
@@ -167,7 +181,7 @@ if(mysqli_num_rows($result)>0){
 ">
     <div class="card">
         <img src="../images/<?php echo $row["images"];?>" >
-            <div class="container-1">
+            <div class="container">
               <h4 class="Pname"><b><?php echo $row["productNmae"];?></b></h4>
 </form>
   <form action="" method="POST" name="cart">
