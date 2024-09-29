@@ -63,14 +63,19 @@ label {
 }
 
 .manage-btn {
-  width: 30px;
-  height: 30px;
-  color: black;
+  background-color: #b17457;
   border: none;
-  border-radius: 5px;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
 .edit-btn:hover {
-  background-color: #79a3b1;
+  background-color: #603f26;
+  color: white;
 }
 .dlt-btn:hover {
   background-color: red;
