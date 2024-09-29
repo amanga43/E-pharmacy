@@ -1,0 +1,78 @@
+body {
+  background-image: url("../admin-images/u.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.admin-nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.admin-nav-bar ul li {
+  float: right;
+}
+.admin-nav-bar li a {
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 16px;
+  color: black;
+  display: block;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.admin-nav-bar li a:hover {
+  color: rgb(166, 115, 60);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.addOrdersFormContainer {
+  background-color: #bc9f8b;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 40%;
+}
+form {
+  border: 3px solid #fef3e2;
+  padding: 10px;
+}
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="number"] {
+  width: 100px;
+}
+input[type="radio"] {
+  width: 20px;
+}
+.submit-btn {
+  padding: 20px;
+  color: aliceblue;
+  background-color: #674636;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: auto;
+  font-size: 15px;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: #fff8e8;
+  color: black;
+}
+.add-orders-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
