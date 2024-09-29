@@ -1,0 +1,126 @@
+header {
+  color: rgb(98, 65, 45);
+  text-align: center;
+  padding: 20px 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    303px at 0% 7%,
+    #e8e4d5 31.1%,
+    rgb(205, 160, 93) 36.4%,
+    rgb(216, 169, 116) 50.9%,
+    rgb(199, 206, 187) 60.7%,
+    rgb(138, 79, 36) 72.5%,
+    #e8e4d5 72.6%
+  );
+  /* background-color: #d0b89c; */
+  /* background: rgb(248, 233, 214);
+  background: linear-gradient(
+    0deg,
+    rgba(248, 233, 214, 1) 16%,
+    rgba(184, 157, 127, 1) 50%
+  ); */
+  /* background-color: #f4f4f4; */
+}
+.robot {
+  position: absolute;
+  right: 100px; /* Adjust distance from the right */
+  top: 80px;
+  z-index: 1;
+}
+.main-containerr {
+  width: 50%;
+  margin: auto;
+}
+
+h2 {
+  color: rgb(98, 65, 45);
+}
+
+.upload-prescription,
+.prescription-list {
+  /* background: rgb(127, 80, 80); */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(249, 226, 204, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.2px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.upload-prescription input[type="text"],
+.upload-prescription input[type="email"],
+.upload-prescription input[type="tel"],
+.upload-prescription input[type="file"],
+.upload-prescription input[type="date"],
+.upload-prescription select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.prescriptionbtn {
+  background-color: #51321e;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prescriptionbtn:hover {
+  background-color: #9e6d4d;
+}
+
+.prescription-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.prescription-item .status {
+  font-weight: bold;
+  color: #e74c3c; /* Change color based on status (red for pending, etc.) */
+}
+
+.prescription-item .prescriptionbtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.prescription-item .prescriptionbtn:hover {
+  background-color: #c0392b;
+}
+
+.prescription-item .fa-solid {
+  color: #555;
+  font-size: 20px;
+}
+
+.close-pres {
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute; /* Change to absolute */
+  right: 60px; /* Adjust distance from the right */
+  top: 40px; /* Adjust distance from the top */
+  background-color: rgba(99, 52, 34, 0.693);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
