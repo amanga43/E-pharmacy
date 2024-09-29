@@ -41,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         // Validate file type and size
         if (in_array($imageType, $allowed)) {  //checks if the value exists in the $allowed array
             if ($imageSize < 5000000) { // Limit file size to 5MB
-                $newImageName = uniqid('', true) . "." . $imageType; //avoid duplicate image names
+            
                 $targetDir = 'uploads/';  //directory where the uploaded file will be stored 
-                $targetFile = $targetDir . $newImageName;
+                $targetFile = $targetDir.basename($productImage);
 
                 // Ensure the 'uploads' directory exists and is writable
                 if (!is_dir($targetDir) && !mkdir($targetDir, 0755, true)) {
