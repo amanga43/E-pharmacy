@@ -76,7 +76,9 @@ if(isset($_POST['addtocart']))
   
     
 </section>
+
 <section>
+
 <div class="title">
   <h2>Categories</h2>
 </div>
@@ -88,16 +90,18 @@ if(isset($_POST['addtocart']))
 <div class="row">
   <div class="column">
     <div class="cat">
-        <img src="../images/drugs.png" >
+      
+        <img src="../images/50de437c40bba6893a0041e13031b741.jpg" >
+        <div class="container-1">
         <h4><b>TABLETS</b></h4>
- 
+</div>
     </div>
   </div>
 </a>
 <a href="../php/syrups.php">
   <div class="column">
     <div class="cat">
-        <img src="../images/syrup.png" >
+        <img src="../images/sy.jpg" >
             <div class="container-1">
               <h4><b>SYRUPS</b></h4>
              
@@ -107,7 +111,7 @@ if(isset($_POST['addtocart']))
   <a href="../php/eye.php">
   <div class="column">
     <div class="cat">
-        <img src="../images/eyecare.png" >
+        <img src="../images/image.png" >
             <div class="container-1">
               <h4><b>EYECARE</b></h4>
  
@@ -118,8 +122,8 @@ if(isset($_POST['addtocart']))
 <a href="../php/hair.php">
   <div class="column">
     <div class="cat">
-        <img src="../images/shampoo.png" >
-            <div class="container-1r">
+        <img src="../images/eb5c0e2cff117a19f9e19139011b047f.jpg" >
+            <div class="container-1">
               <h4><b>HAIRCARE</b></h4>
  
             </div></div>
@@ -128,7 +132,7 @@ if(isset($_POST['addtocart']))
 <a href="../php/vitamins.php">
 <div class="column">
     <div class="cat">
-        <img src="../images/supplement.png" >
+        <img src="../images/im.jpg" >
             <div class="container-1">
               <h4><b>VITAMINS</b></h4>
             
