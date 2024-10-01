@@ -20,6 +20,8 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
     }
 
     // If all validations pass, submit the form
+    function sucessmsg(){
     alert('Form submitted successfully!');
-    this.submit();  // Submits the form after successful validation
+    this.submit();
+    }  // Submits the form after successful validation
 });

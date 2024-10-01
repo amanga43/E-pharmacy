@@ -4,7 +4,7 @@ include 'dbconnection.php';
 
 
 if (!isset($_SESSION['custId'])) {
-    header("Location: login.php"); 
+    header("Location: profile-update.php"); 
     exit();
 }
 
@@ -25,25 +25,25 @@ if (!$user) {
 }
 
 if (isset($_POST['update_account'])) {
-    header("Location: update.php"); 
+    header("Location: profile-update.php"); 
     exit();
 }
 
 
-if (isset($_POST['delete_account'])) {
-    $deleteQuery = "DELETE FROM customer WHERE custId = ?";
-    $deleteStmt = $conn->prepare($deleteQuery);
-    $deleteStmt->bind_param('i', $custId);
+// if (isset($_POST['delete_account'])) {
+//     $deleteQuery = "DELETE FROM profile WHERE email = ?";
+//     $deleteStmt = $conn->prepare($deleteQuery);
+//     $deleteStmt->bind_param('s', $email);
     
-    if ($deleteStmt->execute()) {
+//     if ($deleteStmt->execute()) {
        
-        session_destroy(); 
-        header("Location: login.php"); 
-        exit();
-    } else {
-        echo "<script>alert('Failed to delete account!');</script>";
-    }
-}
+//         session_destroy(); 
+//         header("Location:  profile-update.php"); 
+//         exit();
+//     } else {
+//         echo "<script>alert('Failed to delete account!');</script>";
+//     }
+// }
 
 ?>
 
@@ -62,7 +62,7 @@ if (isset($_POST['delete_account'])) {
             <h2>User Profile</h2>
             <div class="form-group">
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($user['custName']); ?>" disabled>
+                <input type="text" id="Name" name="name" value="<?php echo htmlspecialchars($user['custName']); ?>" disabled>
             </div>
             <div class="form-group">
                 <label for="dob">Date of Birth:</label>
@@ -88,9 +88,11 @@ if (isset($_POST['delete_account'])) {
 
             <!-- Buttons below the profile details -->
             <div class="buttons">
-                <button id="updateBtn">Update Account</button>
-                <button id="saveBtn" disabled>Save</button>
-                <button id="deleteBtn">Delete Account</button>
+                <a href="profile-update.php?updateId=<?php echo $user['custId']?>" id="updateBtn">Update btn</a>
+                <!-- <button id="updateBtn">Update Account</button> -->
+                <button id="saveBtn" type="submit" disabled>Save</button>
+                <!-- <button id="deleteBtn">Delete Account</button> -->
+                  <a href="profile-delete.php?deleteId=<?php echo $user['custId']?>" id="deleteBtn">Delete btn</a>
             </div>
         </div>
 
