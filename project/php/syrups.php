@@ -35,25 +35,35 @@ if(isset($_POST['addtocart']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product page</title>
     <link rel="stylesheet" href="../css/eye.css"/>
+    <link rel="stylesheet" href="../../home-page.css" />
     <!--fontawsome link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--navbar-->
-    <div class="nav">
-  
-        <ul>
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">About Us</a></li>
-            <li><a class="nav-link" href="product.php" >Products</a></li>
-            <li><a class="nav-link" href="#" >Contact Us</a></li>
-    </ul>
-    <div class="nav-right">
-        <a href="../php/cart.php"><i class="fa fa-shopping-cart"></i></a>
-        <a href="#"><i class="fa fa-user"></i></a>
+    <?php
+    include('./homepage-header1.php');
+    ?>
 
-    </div>
-</div>
+<!--header-->
+<section class="header">
+    <!--search bar-->
+ 
+<img src="../images/s.jpg" >
+<form  action="">
+    <div class="search">
+  <input type="search" placeholder="Search here..." required>
+  <button type="submit">Search</button>
+  <a href="../php/cart.php"  class="nav-right"><i class="fa fa-shopping-cart"></i></a>
+  </div>
+</form> 
+<div class="text">
+    <h1>SYRUPS</h1>
+    <h2>"Boost Your Health, One Sip at a Time."</h2>
+    <marquee class="marq" direction="up" loop=""><p>syrup has been significant to Indigenous peoples for thousands of years, helping to sustain them.We have variety of syrups for cure your illnesses.Kindly,do not use these products to treat cold symptoms in children younger than 6 years unless specifically directed by the doctor.To decrease the risk for side effects, carefully follow all dosage directions.  </p></marquee>
+    </div> 
+   
+</section>
 <div class="topnav">
 <a href="../php/tablets.php" >Tablets</a>
   <a href="../php/syrups.php" class="active">Syrups</a>
@@ -61,25 +71,6 @@ if(isset($_POST['addtocart']))
   <a href="../php/eye.php">Eye Care</a>
   <a href="../php/vitamins.php">Vitamins</a>
 </div>
- <!--search bar-->
- <form  action="">
-    <div class="search">
-  <input type="search" placeholder="Search here..." required>
-  <button type="submit">Search</button>
-  </div>
-</form> 
-
-<!--header-->
-<section class="header">
-<img src="../images/s.jpg" >
-<div class="text">
-    <h1>SYRUPS</h1>
-    <h2>"Boost Your Health, One Sip at a Time."</h2>
-    <p>syrup has been significant to Indigenous peoples for thousands of years, helping to sustain them. It was used for multiple purposes: as a sweetener, an anesthetic, to preserve meats through the process of curing, and eventually as a trade item and used to treat coughs and congestion caused by the common cold and other breathing illnesses.We have variety of syrups for cure your illnesses.Kindly,do not use these products to treat cold symptoms in children younger than 6 years unless specifically directed by the doctor.To decrease the risk for side effects, carefully follow all dosage directions.  </p>
-    </div> 
-   
-</section>
-
 <?php
 
  // php for product page main view
@@ -99,7 +90,7 @@ if(mysqli_num_rows($result)>0){
 <div class="column">
     <div class="card">
         <img src="../images/<?php echo $row["images"];?>" >
-            <div class="container">
+            <div class="container-2">
               <h4><b><?php echo $row["productNmae"];?></b></h4>
 
               </form>

@@ -35,48 +35,41 @@ if(isset($_POST['addtocart']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product page</title>
     <link rel="stylesheet" href="../css/eye.css"/>
+    <link rel="stylesheet" href="../../home-page.css" />
     <!--fontawsome link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--navbar-->
-    <div class="nav">
-  
-        <ul>
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">About Us</a></li>
-            <li><a class="nav-link" href="product.php" >Products</a></li>
-            <li><a class="nav-link" href="#" >Contact Us</a></li>
-    </ul>
-    <div class="nav-right">
-        <a href="../php/cart.php"><i class="fa fa-shopping-cart"></i></a>
-        <a href="#"><i class="fa fa-user"></i></a>
+    <?php
+    include('./homepage-header1.php');
+    ?>
 
+
+
+<!--header-->
+<div class="header">
+    <img src="../images/eye.jpg" >
+     <!--search bar-->
+ <form  action="">
+    <div class="search">
+  <input type="search" placeholder="Search here..." required>
+  <button type="submit">Search</button>
+  <a href="../php/cart.php"  class="nav-right"><i class="fa fa-shopping-cart"></i></a>
+  </div>
+</form> 
+   <div class="text">
+    <h1>EYE CARE</h1>
+    <marquee class="marq" direction="up" loop=""><p>Sight and the hearing are the most vital senses,allowing us to navigate the world ,connect with others and experience the beauty around us. At Care Meds, we understand the importance and provide you with the highest quality  products. Shop our ear and eye care essentials today and start enjoying better vision and hearing!</p></marquee>
     </div>
 </div>
 <div class="topnav">
   <a href="../php/tablets.php" >Tablets</a>
   <a href="../php/syrups.php">Syrups</a>
-  <a href="../php/hair.php">Hair Care</a>
+  <a href="../php/hair.php">Hair care</a>
   <a href="../php/eye.php" class="active">Eye Care</a>
   <a href="../php/vitamins.php">Vitamins</a>
 </div>
- <!--search bar-->
- <form  action="">
-    <div class="search">
-  <input type="search" placeholder="Search here..." required>
-  <button type="submit">Search</button>
-  </div>
-</form> 
-<!--header-->
-<div class="header">
-    <img src="../images/eye.jpg" >
-   <div class="text">
-    <h1>EYE CARE</h1>
-    <p>Sight and the hearing are the most vital senses,allowing us to navigate the world ,connect with others and experience the beauty around us. So it’s important that people take care of their both eyes and ears. At Care Meds, we understand the importance and provide you with the highest quality eye and ear care products and services. Our wide selection of products can help you treat dry, itchy, sore, or bloodshot eyes, as well as ear infections, swimmer's ear, and hearing loss. Shop our ear and eye care essentials today and start enjoying better vision and hearing!</</p>
-    </div>
-</div>
-
 
 <?php
 
@@ -97,7 +90,7 @@ if(mysqli_num_rows($result)>0){
 <div class="column">
     <div class="card">
         <img src="../images/<?php echo $row["images"];?>" >
-            <div class="container">
+            <div class="container-2">
               <h4><b><?php echo $row["productNmae"];?></b></h4>
 
               </form>
@@ -121,5 +114,9 @@ if(mysqli_num_rows($result)>0){
     ;}
 ;};}
 ?>
+
 </body>
 </html>
+<?php
+include('../../hompage-footer.php');
+?>

@@ -33,7 +33,7 @@ body{
         padding: 10px;
         cursor: pointer;
         font-size:20px ;
-        background-color: #471a58;
+        background-color: #352503;
         color: #e4eeed;
    
   }
@@ -81,12 +81,12 @@ font-size:18px ;
 color: #fff;
 width: 80%;
   border: none;
-  background-color: #662558;
+  background-color: #44290f;
   font-size: 16px;
   
 }
 input[type="submit"]:hover {
-  background-color: #b173b9;
+  background-color: #9b6430;
   color: white;
 }
 

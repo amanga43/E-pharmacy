@@ -46,28 +46,20 @@ if(isset($_POST['addtocart']))
     <?php
     include('./homepage-header1.php');
     ?>
-    <!-- <div class="nav">
   
-        <ul>
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">About Us</a></li>
-            <li><a class="nav-link" href="product.php" >Products</a></li>
-            <li><a class="nav-link" href="#" >Contact Us</a></li>
-    </ul>
-    <div class="nav-right">
-        <a href="../php/cart.php"><i class="fa fa-shopping-cart"></i></a>
-        <a href="#"><i class="fa fa-user"></i></a>
-
-    </div>
-</div> -->
+  
 <!--search bar-->
 
-<form action="product.php" method="get" name="search_form">
+<form action="search.php" method="GET" name="search_form">
     <div class="search">
-  <input type="text" placeholder="Search products..." name="search_product" autocomplete="off">
+  <input type="text" placeholder="Search products..." name="query" >
   <input type="submit" value="Search" name="search_data">
+
+ 
 </div>
 </form>
+<!--cart icon-->
+<div class="cart-icon"><a href="../php/cart.php"><i class="fa fa-shopping-cart"></i></a></div>
 
 
 <section class="header">
@@ -163,78 +155,36 @@ if(mysqli_num_rows($result)>0){
 
        
  ?>
-
-  <!--get data to send to the details.php-->
+ 
+                 <!--get data to send to the details.php-->
 <form action="details.php" method="POST" name="viewform">
 <a href="../php/details.php?ID=<?=$productId;?>">
-<div class="column-1
-">
+<div class="column-1">
     <div class="card">
         <img src="../images/<?php echo $row["images"];?>" >
-            <div class="container-1">
-              <h4 class="Pname"><b><?php echo $row["productNmae"];?></b></h4>
-</form>
-  <form action="" method="POST" name="cart">
-      <input type="hidden" name="pID" value="<?php echo $row["productId"];?>">
-      <input type="hidden" name="price" value="<?php echo $row["productPrice"] ;?>">
-      <input type="hidden" name="img" value="<?php echo $row["images"] ;?>">
-       <input type="hidden" name="cId" value="<?php echo  $crow["cusId"] ;?>">
-      <input type="submit" name="addtocart" value="Add to cart" class="btn">
-   </form>
+            <div class="container-2">
+              <h4><b><?php echo $row["productNmae"];?></b></h4>
+
+              </form></a>
+               <form action="" method="POST" name="cart">
+              <input type="hidden" name="pID" value="<?php echo $row["productId"];?>">
+              <input type="hidden" name="price" value="<?php echo $row["productPrice"] ;?>">
+              <input type="hidden" name="img" value="<?php echo $row["images"] ;?>">
+              <input type="hidden" name="cId" value="<?php echo  $crow["cusId"] ;?>">
+              <input type="submit" name="addtocart" value="Add to cart" >
+              </form>
             </div>
-    
+            
+              
             </div>
+
   </div>
 
-</a> 
+  </section>
 <?php
 ;};};}
-/*
-if(isset($_POST['search_data'])){
-$user_search = $_POST['search_product'];
-$search =mysqli_query($conn,"SELECT * FROM products WHERE productNmae LIKE '%$user_search%'");
-if(mysqli_num_rows($result)>0){
-  
-  //output the data of each row
-  while($row = mysqli_fetch_assoc($result)){
-    $productId = $row["productId"];*/
-    ?>
-      
-   <!--   <form action="details.php" method="POST" name="viewform">
-      <a href="../php/details.php?ID=<?//=$productId;?>">
-      <div class="column">
-          <div class="card">
-              <img src="../images/<?php// echo $row["images"];?>" >
-                  <div class="container">
-                    <h4 class="Pname"><b><?php//// echo $row["productNmae"];?></b></h4>
-      </form>
-        <form action="" method="POST" name="cart">
-            <input type="hidden" name="pID" value="<?php //echo $row["productId"];?>">
-            <input type="hidden" name="price" value="<?php// echo $row["productPrice"] ;?>">
-            <input type="hidden" name="img" value="<?php //echo $row["images"] ;?>">
-             <input type="hidden" name="cId" value="<?php //echo  $crow["cusId"] ;?>">
-            <input type="submit" name="addtocart" value="Add to cart" class="btn">
-         </form>
-                  </div>
-          
-                  </div>
-        </div>
-      
-      </a> -->
 
-
-
-</section>
-<?php
-   /* ;}
-;};};}*/
 ?>
-
 
 </body>
 </html>
-
-
-<?php
-include '../../hompage-footer.php';
-?>
